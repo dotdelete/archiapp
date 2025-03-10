@@ -10,22 +10,20 @@
 <body>
     <div class="container">
         <h1>Message Board</h1>
-        
+
+        <button id="theme-toggle" class="pure-button">Toggle Dark Mode</button>
+
         <section>
             <h2>Recent Messages</h2>
-            <ul id="message-list" class="message-list">
-                <li>Message 1: Hello!</li>
-                <li>Message 2: Howdy.</li>
-                <li>Message 3: Hi!</li>
-                <li>Message 4: Greetings.</li>
-                <li>Message 5: Salutations!</li>
-            </ul>
+            <ul id="message-list" class="message-list"></ul>
+            <button id="refresh-button" class="pure-button pure-button-primary">Refresh</button>
         </section>
-        
+
         <section class="form-container">
             <h2>Post a Message</h2>
             <form class="pure-form">
                 <fieldset>
+                    <input type="text" id="user-input" placeholder="Your Name" class="pure-input">
                     <textarea id="message-input" rows="4" placeholder="Write your message here..."></textarea>
                     <button id="send-button" class="pure-button pure-button-primary">Send</button>
                 </fieldset>
