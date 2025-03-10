@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Board</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@2.0.6/build/pure-min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Message Board</h1>
+        
+        <section>
+            <h2>Recent Messages</h2>
+            <ul id="message-list" class="message-list">
+                <li>Message 1: Hello!</li>
+                <li>Message 2: Howdy.</li>
+                <li>Message 3: Hi!</li>
+                <li>Message 4: Greetings.</li>
+                <li>Message 5: Salutations!</li>
+            </ul>
+        </section>
+        
+        <section class="form-container">
+            <h2>Post a Message</h2>
+            <form class="pure-form">
+                <fieldset>
+                    <textarea id="message-input" rows="4" placeholder="Write your message here..."></textarea>
+                    <button id="send-button" class="pure-button pure-button-primary">Send</button>
+                </fieldset>
+            </form>
+        </section>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
