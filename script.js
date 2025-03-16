@@ -1,8 +1,8 @@
 // Initial messages
 let msgs = [
-  { msg: "Hello World", user: "Alice", timePosted: new Date().toLocaleString() },
-  { msg: "Blah Blah", user: "Bob", timePosted: new Date().toLocaleString() },
-  { msg: "I love cats", user: "Charlie", timePosted: new Date().toLocaleString() }
+  { message: "Hello World", user: "Alice", timePosted: new Date().toLocaleString() },
+  { message: "Blah Blah", user: "Bob", timePosted: new Date().toLocaleString() },
+  { message: "I love cats", user: "Charlie", timePosted: new Date().toLocaleString() }
 ];
   
   // Updates message list
@@ -12,7 +12,7 @@ let msgs = [
   
     messages.forEach((item, index) => {
       let li = document.createElement("li");
-      li.innerHTML = `<strong>${item.user}</strong>: ${item.msg} <br> <small>${item.timePosted}</small>`;
+      li.innerHTML = `<strong>${item.user}</strong>: ${item.message} <br> <small>${item.timePosted}</small>`;
       li.classList.add("message-item");
       messageList.appendChild(li);
     });
