@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Message Board</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@2.0.6/build/pure-min.css">
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Message Board</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@2.0.6/build/pure-min.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Message Board</h1>
+  <div class="container">
+    <h1>Message Board</h1>
 
-        <button id="theme-toggle" class="pure-button">Toggle Dark Mode</button>
+    <button id="theme-toggle" class="pure-button">Toggle Dark Mode</button>
 
-        <section>
-            <h2>Recent Messages</h2>
-            <ul id="message-list" class="message-list"></ul>
-            <button id="refresh-button" class="pure-button pure-button-primary">Refresh</button>
-        </section>
+    <section>
+      <h2>Recent Messages</h2>
+      <ul id="message-list" class="message-list"></ul>
+      <button id="refresh-button" class="pure-button pure-button-primary">Refresh</button>
+    </section>
 
-        <section class="form-container">
-            <h2>Post a Message</h2>
-            <form class="pure-form">
-                <fieldset>
-                    <input type="text" id="user-input" placeholder="Your Name" class="pure-input">
-                    <textarea id="message-input" rows="4" placeholder="Write your message here..."></textarea>
-                    <button id="send-button" class="pure-button pure-button-primary">Send</button>
-                </fieldset>
-            </form>
-        </section>
-    </div>
-    <script src="./script.js"></script>
+    <section class="form-container">
+      <h2>Post a Message</h2>
+      <form class="pure-form">
+        <fieldset>
+          <input type="text" id="user-input" placeholder="Your Name" class="pure-input">
+          <textarea id="message-input" rows="4" placeholder="Write your message here..."></textarea>
+          <button id="send-button" class="pure-button pure-button-primary">Send</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <section class="form-container">
+      <h2>Service URL</h2>
+      <input type="text" id="service-url" placeholder="Enter micro-service URL" class="pure-input" value="https://your-microservice-url">
+    </section>
+  </div>
+  <script src="./script.js"></script>
 </body>
 </html>
