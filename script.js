@@ -4,6 +4,10 @@ let msgs = [
   { message: "Blah Blah", user: "Bob", timePosted: new Date().toLocaleString() },
   { message: "I love cats", user: "Charlie", timePosted: new Date().toLocaleString() }
 ];
+
+  function removeTrailingSlash(url) {
+    return url.replace(/\/+$/, ""); // Removes one or more trailing slashes
+  }
   
   // Updates message list
   function update(messages) {
@@ -20,7 +24,7 @@ let msgs = [
   
   // Fetch messages from the backend
   function fetchMessages() {
-    let serviceUrl = document.getElementById("service-url").value;
+    let serviceUrl = removeTrailingSlash(document.getElementById("service-url").value);
   
     fetch(`${serviceUrl}/msg/getAll`)
       .then((response) => response.json())
@@ -47,7 +51,7 @@ let msgs = [
     let userName = userField.value.trim() || "Anonymous";
   
     if (newMessage !== "") {
-      let serviceUrl = document.getElementById("service-url").value;
+      let serviceUrl = removeTrailingSlash(document.getElementById("service-url").value);
       let fullMessage = `${userName}: ${newMessage}`;
   
       fetch(`${serviceUrl}/msg/post/${encodeURIComponent(fullMessage)}`)
